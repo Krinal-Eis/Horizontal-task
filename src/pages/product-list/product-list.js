@@ -33,13 +33,15 @@ const ProductListPage = () => {
               <Card.Text>
                 {item.description}
               </Card.Text>
-              <p>Quantity: {item.quantity}</p>
+              
               <div>
-                <Button onClick={() => dispatch(decreaseProductQnt(item))}>-</Button>
+                <span>Quantity: </span> 
+                <Button onClick={() => dispatch(decreaseProductQnt(item))} className="ml-2">-</Button>
                 &nbsp;
+                <span className='p-2'>{item.quantity}</span>
                 <Button onClick={() => dispatch(increaseProductQnt(item))}>+</Button>
               </div>
-              <h6>Price: $ {item.Price * item.quantity}</h6>
+              <h6 className='mt-3'>Price: $ {item.Price * item.quantity}</h6>
               <Button className="btn btn-primary btn-block" onClick={() => dispatch(addToCart(item))}>Add to cart</Button>
             </Card.Body>
           </Card>
