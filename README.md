@@ -1,1 +1,1 @@
-Horizontal task
+Horizontal digital task
